@@ -15,6 +15,7 @@ public class ValuesController {
 
     Values values;
 
+    // initializes the controller and creates a new Values object.
     ValuesController() {
         values = new Values();
     }

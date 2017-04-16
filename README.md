@@ -1,2 +1,13 @@
 # Values-Webservice
-Quick web service project demonstration for Kochava interview
+A quick web service project demonstration for Kochava interview
+
+## Install
+In Linux, 
+```sh
+$ bash gradlew build
+```
+In Windows,
+```cmd
+> gradlew.bat
+```
+

@@ -17,7 +17,11 @@ public class Values {
     private ArrayList<Integer> values;
 
     Values() {
+
+        // initialize new values array.
         values = new ArrayList<>();
+
+        // creates a shutdown hook to write out changes to the values array into the values.json file.
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
 
             System.err.println("Hit shutdown hook, saving json file");
@@ -35,10 +39,9 @@ public class Values {
             } catch (IOException e) {
                 System.err.println("Failed to write values.json");
             }
-
-
         }));
 
+        // attempts to open the values.json file to load previously added values into the array.
         JSONParser parser = new JSONParser();
         try {
             JSONObject obj = (JSONObject) parser.parse(new FileReader("values.json"));
