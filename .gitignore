@@ -1,3 +1,4 @@
 build/
 lib/
+.gradle/
 values.json

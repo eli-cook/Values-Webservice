@@ -1,15 +1,16 @@
 package values;
-/**
- * Created by Eli on 4/13/2017.
- */
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
 import java.io.*;
 import java.util.ArrayList;
+
+/**
+ * Created by Eli on 4/13/2017.
+ * Defines the Values class that holds the array of Integers to be used for summation.
+ */
 
 public class Values {
 
@@ -55,6 +56,7 @@ public class Values {
         }
     }
 
+    // adds a value to the array of values and checks if added correctly.
     public String addVal(Integer value) {
         values.add(value);
         if (!values.isEmpty()) {
@@ -65,6 +67,7 @@ public class Values {
         return "value was not added successfully";
     }
 
+    // deletes all values from the array and confirms no values exits in array.
     public String delVal() {
         values.clear();
         if(values.size() == 0) {
@@ -73,6 +76,7 @@ public class Values {
         return "DELETE failed";
     }
 
+    // sums all values in the array and returns sum.
     public Integer sum() {
         Integer sum = 0;
         for(int i : values) {
