@@ -70,7 +70,7 @@ public class Values {
         return "value was not added successfully";
     }
 
-    // deletes all values from the array and confirms no values exits in array.
+    // deletes all values from the array and confirms no values exists in array.
     public String delVal() {
         values.clear();
         if(values.size() == 0) {
